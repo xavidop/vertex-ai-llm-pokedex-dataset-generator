@@ -80,7 +80,7 @@ func createPokemonLine(pokemon structs.Pokemon) (string, error) {
 	pokemonDescription := ""
 	for _, spec := range species.FlavorTextEntries {
 		if strings.Contains(spec.Language.Name, "en") {
-			pokemonDescription = strings.ReplaceAll(spec.FlavorText, "\n", "")
+			pokemonDescription = strings.ReplaceAll(spec.FlavorText, "\n", " ")
 		}
 	}
 
